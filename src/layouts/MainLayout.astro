@@ -15,6 +15,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title ?? "Blog"}</title>
     <ViewTransitions />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Javier's blog RSS feed"
+      href={new URL("rss.xml", Astro.site)}
+    />
   </head>
   <body class="bg-gray-900">
     <main class="mb-10 max-w-5xl m-auto px-5 py-2">
